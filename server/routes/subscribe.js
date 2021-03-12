@@ -1,14 +1,26 @@
 const express = require('express')
-const Redis = require('ioredis')
 const {
     curly
 } = require('node-libcurl')
+const {
+    URL
+} = require('url')
+const dockerIpTools = require("docker-ip-get");
 
 const router = express.Router()
 
 router.post('/:topic', async (req, res) => {
     const topic = req.params.topic
-    const url = req.body.url
+    let url = ""
+    if (dockerIpTools.isInDocker()) {
+        const reqUrl = new URL(req.body.url)
+        const port = reqUrl.port
+        const path = reqUrl.pathname
+        const internalHost = '172.17.0.1'
+        url = `http://${internalHost}:${port}${path}`
+    } else {
+        url = req.body.url
+    }
 
     console.log(`Subscribing client to ${topic} topic.`);
     try {
@@ -29,7 +41,7 @@ router.post('/:topic', async (req, res) => {
             topic: data.topic
         })
     } catch (err) {
-        console.error('ERROR:', e.message)
+        console.error('ERROR:', err.message)
         return res.status(500).json({
             status: false,
             message: err.message
