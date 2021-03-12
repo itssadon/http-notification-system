@@ -38,14 +38,14 @@ For when docker is not installed
 - Open a new shell window/tab
 - Navigate to the server directory in the project and start subscriber
 
-    `./start-server.sh http-pubsub itssadon/http-pubsub http-pubsub-client itssadon/http-pubsub-client`
+    `./start-server.sh`
 
 ### Docker
 Make sure docker is installed
 
 - Navigate to root of the project and run
 
-    `./start-server.sh`
+    `./start-server.sh http-pubsub itssadon/http-pubsub http-pubsub-client itssadon/http-pubsub-client`
 
 ## Maintainer
 - Abubakar Sadiq Hassan - <abubakarhassan59@gmail.com>
