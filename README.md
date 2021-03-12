@@ -47,5 +47,9 @@ Make sure docker is installed
 
     `./start-server.sh http-pubsub itssadon/http-pubsub http-pubsub-client itssadon/http-pubsub-client`
 
+## Screenshot
+
+![Screenshot](/screenshot.png?raw=true "Screenshot")
+
 ## Maintainer
 - Abubakar Sadiq Hassan - <abubakarhassan59@gmail.com>
