@@ -10,10 +10,21 @@ When a message is published on a topic, it should be forwarded to all subscriber
 
 ## Usage
 ### 1. Locally
-- Install dependencies from the root of the project
+For when docker is not installed
+
+- Install dependencies by running the below in shell from the root of the project
 
     `npm install`
 
-- Navigate to the server directory and start publisher server in one terminal window/tab
+- Start redis
 
-    `cd server && npm start`
+    `brew services start redis`
+
+- Navigate to the client directory in the project and start subscriber
+
+    `cd client && npm start`
+
+- Open a new shell window/tab
+- Navigate to the server directory in the project and start subscriber
+
+    `./start-server.sh`
