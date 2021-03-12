@@ -12,6 +12,7 @@ When a message is published on a topic, it should be forwarded to all subscriber
 ### 1. Locally
 For when docker is not installed
 
+- Navigate to the root of the project
 - Install dependencies by running the below in shell from the root of the project
 
     `npm install`
@@ -26,5 +27,12 @@ For when docker is not installed
 
 - Open a new shell window/tab
 - Navigate to the server directory in the project and start subscriber
+
+    `./start-server.sh`
+
+### Docker
+Make sure docker is installed
+
+- Navigate to root of the project and run
 
     `./start-server.sh`
