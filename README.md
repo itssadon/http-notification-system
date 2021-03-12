@@ -9,7 +9,7 @@ A server (or set of servers) will keep track of topics -> subscribers where a to
 When a message is published on a topic, it should be forwarded to all subscriber endpoints.
 
 ## Usage
-### 1. Locally
+### Locally
 For when docker is not installed
 
 - Navigate to the root of the project
@@ -36,3 +36,6 @@ Make sure docker is installed
 - Navigate to root of the project and run
 
     `./start-server.sh`
+
+## Maintainer
+- Abubakar Sadiq Hassan - <abubakarhassan59@gmail.com>
