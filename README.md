@@ -8,6 +8,16 @@ A server (or set of servers) will keep track of topics -> subscribers where a to
 
 When a message is published on a topic, it should be forwarded to all subscriber endpoints.
 
+## Requirements
+### Mandatory
+You need to have the following installed:
+- Redis - [https://redis.io](...more information here)
+- Node.js - [https://nodejs.dev](...more information here)
+
+### Optional
+You can optionally have the following installed
+- Docker - [https://docker.com](...more information here)
+
 ## Usage
 ### Locally
 For when docker is not installed
