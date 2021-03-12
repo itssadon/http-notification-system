@@ -11,7 +11,10 @@ if (cluster.isMaster) {
     })
 } else if (cluster.isWorker) {
     const app = express()
-    const redis = new Redis()
+    const redis = new Redis({
+        host: process.env.REDIS_HOST,
+        port: 6379
+    })
 
     redis.on('message', (topic, object) => {
         console.log(`Received the following from ${topic}: ${object}`)
@@ -48,6 +51,7 @@ if (cluster.isMaster) {
                     topic: topic
                 })
             }
+            
             console.log(`Subscribed to ${count} topic. ${serverName} is listening for updates on the ${topic} topic.`)
             return res.status(200).json({
                 status: true,
