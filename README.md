@@ -11,7 +11,9 @@ When a message is published on a topic, it should be forwarded to all subscriber
 ## Usage
 ### 1. Locally
 - Install dependencies from the root of the project
-`npm install`
+
+    `npm install`
 
 - Navigate to the server directory and start publisher server in one terminal window/tab
-`cd server && npm start`
+
+    `cd server && npm start`
