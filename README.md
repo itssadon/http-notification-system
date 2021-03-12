@@ -11,12 +11,12 @@ When a message is published on a topic, it should be forwarded to all subscriber
 ## Requirements
 ### Mandatory
 You need to have the following installed:
-- Redis - [https://redis.io](...more information here)
-- Node.js - [https://nodejs.dev](...more information here)
+- Redis - [...more information here](https://redis.io)
+- Node.js - [...more information here](https://nodejs.dev)
 
 ### Optional
 You can optionally have the following installed
-- Docker - [https://docker.com](...more information here)
+- Docker - [...more information here](https://docker.com)
 
 ## Usage
 ### Locally
